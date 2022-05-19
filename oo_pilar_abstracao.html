@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OO Pilar da Abstração</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		
+		//Modelo do Objeto 
+		class contaBancaria {//Inicio Objeto
+			//agencia
+			//numeroConta
+			//saldo
+			//limite
+			constructor() {
+				/*this faz com que o elemento seja 
+				  conectado ao contexto do ojeto*/
+			    this.agencia = 633
+			    this.numeroConta = 85654-4
+			    this.saldo = 3000
+			    this.limite = 4000
+			}
+			//metodos (mesma função de Funções)
+			depositar(valorDeposito){
+				this.saldo += valorDeposito
+			}
+
+			sacar(valorSaque){
+				this.saldo -= valorSaque
+			}
+
+			consultarSaldo(){
+				return this.saldo
+			}
+		}//fim do abjeto
+
+		let x = new contaBancaria()//instancia do novo objeto x
+		let y = new contaBancaria()//instancia do novo objeto y
+
+		console.log(x.consultarSaldo())
+		x.depositar(500)
+		console.log(x.consultarSaldo())
+		x.sacar(200)
+		console.log(x.consultarSaldo())
+
+		console.log('valor de Y é: ' + y.consultarSaldo())
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

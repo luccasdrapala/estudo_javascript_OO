@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objeto Literal</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		class Produto {
+			constructor(descricao, preco) {
+				this.descricao = descricao
+				this.preco = preco
+			}
+
+			verDescricao() {
+				console.log(`${this.descricao} por apenas R$${this.preco}`)
+			}
+		}
+
+		let produto = new Produto('Notebook', '2500')
+		produto.verDescricao()
+
+		//Produto Literal
+		let produtoliteral = {
+			descricao: 'Notebook',
+			preco: 1500,
+			verDescricao() {
+				console.log(`${this.descricao} por apenas R$${this.preco}`)
+			}
+		}
+
+		//melhoria de notação
+		let nome = 'Luccas'
+		let idade = 22
+		let sexo = 'Masculino'
+		let profissao = 'T.I'
+
+		let objeto = {
+			nome: nome,
+			idade: idade,
+			sexo: sexo,
+			profissao: profissao,
+			exibirResumo: function() {
+				console.log(`${this.nome}, ${this.idade}, ${this.sexo}, ${this.profissao}`)
+			}
+		}
+
+		console.log(objeto)
+		objeto.exibirResumo()
+
+		let objetoMelhoria = {
+			nome,
+			idade,
+			sexo,
+			profissao,
+			exibirResumo () {
+				console.log(`${this.nome}, ${this.idade}, ${this.sexo}, ${this.profissao}`)
+			}
+		}
+
+		console.log(objetoMelhoria)
+		objetoMelhoria.exibirResumo()
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OO Objeto Literal</title>
+</head>
+
+	<script type="text/javascript">
+
+		//fazer formulário para treinar
+		let nome = 'Jorge'
+		let idade = 23
+		let sexo = 'Masculino'
+		let profissao = 'programador'
+
+		let objeto = {
+			nome: nome,
+			idade: idade,
+			sexo: sexo,
+			profissao: profissao,
+			exibirResumo: function() {
+				console.log(`${this.nome}, ${this.idade} anos, ${this.sexo}, ${this.profissao}`)
+			}
+		}
+
+		console.log(objeto)
+		objeto.exibirResumo()
+
+		let objeto2 = {
+			nome, //nome = nome variavel // valor = valor da variavel
+			idade,
+			sexo,
+			profissao,
+			exibirResumo() {
+				console.log(`${this.nome}, ${this.idade} anos, ${this.sexo}, ${this.profissao}`)
+			}
+		}
+
+		console.log(objeto2)
+		objeto2.exibirResumo()
+
+	</script>
+
+<body>
+
+</body>
+</html>

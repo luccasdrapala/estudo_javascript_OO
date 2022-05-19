@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OO Objeto Literal</title>
+</head>
+
+	<script type="text/javascript">
+
+		class Produto {
+			constructor(descricao, preco) {
+				this.descricao = descricao
+				this.preco = preco
+			}
+			verDescricao() {
+				console.log(`O Produto ${this.descricao} custa R$${this.preco}`)
+			}
+		}
+
+		let produto = new Produto('"notebook"', 3000)
+		produto.verDescricao()
+
+		//---------------------------------------------------------------- 
+
+		let produtoLiteral = {
+			descricao:'Geladeira',
+			preco:1999,
+			verDescricao:function() {//this finciona no contexto do objeto
+				console.log(`O Produto Literal ${this.descricao} custa R$${this.preco}`)
+			}
+		}
+
+		produtoLiteral.verDescricao()
+
+	</script>
+
+<body>
+
+</body>
+</html>

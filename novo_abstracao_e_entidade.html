@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OO Pilar da Entidadee</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		
+
+		//padrão
+		class Cadeira{
+
+			constructor(){
+				this.qtde_pernas = 4
+				this.giratoria = false
+				this.cor = 'preta'
+			}
+
+			giraCadeira(){
+				if(this.giratoria === true){
+					console.log('Girou')
+				}else{
+					console.log('Cadeira não Giratória')
+				}
+			}
+		}
+
+		cadeira = new Cadeira()
+		cadeira.giraCadeira()
+
+
+		//Um pouco mais abstraido
+		class CadeiraAbstraida{
+
+			constructor(qtde_pernas, giratoria, cor){
+				this.qtde_pernas = qtde_pernas
+				this.giratoria = giratoria
+				this.cor = cor
+			}
+
+			giraCadeira(){
+				if(this.giratoria === true){
+					console.log('Girou')
+				}else{
+					console.log('Cadeira não Giratória')
+				}
+			}
+
+		}
+
+		cadeira = new Cadeira()
+		cadeira.giraCadeira()
+
+
+		let cadeiraAbstraida = new CadeiraAbstraida(1, true, 'Preta')
+		console.log(cadeiraAbstraida)
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

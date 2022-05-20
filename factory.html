@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Func_Factory</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+		let funcaoFactory = function(cor, marcha, aro){
+            //logica
+            //requisições http
+            //resposta http
+            return{
+                //cor:cor,    
+                cor,
+                marcha,
+                aro,
+                ped() {console.log('metodo pedalar executado')}
+            }
+        }
+        let obj = funcaoFactory('black', 'march', '66')
+
+        console.log(obj)
+
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

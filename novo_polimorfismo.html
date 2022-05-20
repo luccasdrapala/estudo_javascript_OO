@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polimorfismo</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		//classe pai
+		class Animal {
+			constructor(cor, tamanho, peso) {
+				this.cor = cor
+				this.tamanho = tamanho 
+				this.peso = peso
+			}
+
+			dormir() {
+				console.log('dormir')
+			}
+		}
+
+		//Objeto cachorro
+		class Cachorro extends Animal {
+			constructor(){
+				super()
+				this.orelhas = null
+			}
+
+			correr() {
+				console.log('Corer')
+			}
+
+			rosnar() {
+				console.log('Dormiu')
+			}
+		}
+
+		//Objeto passaro
+		class Passaro extends Animal {
+			constructor(bico, cor, tamanho, peso) {
+				super(cor, tamanho, peso)
+				this.bico = bico
+			}
+
+			voar() {
+				console.log('voar')
+			}
+
+		}
+
+		class Papagaio extends Passaro {
+			constructor(sabeFalar, cor, peso, tamanho, bico) {
+				super(bico, cor, tamanho, peso)
+				this.sabeFalar = sabeFalar	
+			}
+
+			falar(){
+				console.log('falar')
+			}
+		}
+
+		class Avestruz extends Passaro {
+			constructor() {
+				super('Grande', 'Preto e Branco', 250, 150)
+			}
+
+			enterrarCabeca(){
+				console.log('Enterrou a cabeça')
+			}
+
+			voar(){
+				console.log('Não sabe voar')
+			}
+		}
+
+		let papagaio = new Papagaio(true, 'verde', 25, 350, true)
+		console.log(papagaio)
+
+		let avestruz = new Avestruz()
+		avestruz.enterrarCabeca()
+		avestruz.voar()
+
+		papagaio.voar()
+
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow Function</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		
+		let quadrado = function(x = 5) { //(x = 5)represent the default value;
+			return x * x
+		}
+
+		//com apenas um parametro não é necessário parenteses no (x , y)
+		let quadrado1 = x => {
+			return x * x
+		}
+
+		//quando a logica dentro da arrow é apenas
+		//um return, não é necessario as chaves
+		let quadrado2 = x => x * x //retorno implicito
+
+		//funcao normal par/impar
+		let parOuImpar = function(numero) {
+			if (numero % 2 === 0) {
+				return 'par'
+			} else {
+				return 'impar'
+			}
+		}
+
+		//arrow function
+		let parOuImpar1 = numero => {
+			if (numero % 2 === 0) {
+				return 'par'
+			} else {
+				return 'impar'
+			}
+		}
+
+		//retorno implicito, if ternario
+		let parOuImpar2 = numero => numero % 2 === 0 ? 'par' : 'impar'
+
+		document.write(quadrado(3))
+		document.write(quadrado1(3))
+		document.write(quadrado2(3))
+		document.write(parOuImpar(5))
+		document.write(parOuImpar1(6))
+		document.write(parOuImpar1(666))
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

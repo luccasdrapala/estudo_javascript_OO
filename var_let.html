@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Var e Let</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+		//3 escopos: global, função e bloco
+		
+		let serie = 'friends'
+
+		{
+			let serie = 'The Walking Dead'
+			console.log('dentro do bloco: ' + serie)
+		}
+
+		console.log('fora do bloco: ' + serie)
+
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>__proto__</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+        Object.prototype.attr50 = 'z' //torna-se a referencia de animal
+
+        //filhos de object prototype
+		//literal object
+        let animal = {a1: 'a'}//tem referencia default Object.prototype
+        let vertebrado = {__proto__: animal, a2: 'b'}
+        let ave = {__proto__: vertebrado, a3: 'c'}
+
+        console.log(ave.a1, ave.attr50)
+
+
+
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

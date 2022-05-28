@@ -6,11 +6,38 @@
 
 	<script type="text/javascript">
 
-		let fly = {
+		//object
+		let a1 = {
             color: 'white',
             model: '66',
-            skyFly: function () {console.log('Passei pela function()')}
+            skyFly: function() {console.log('Passei pela function()')}
         }
+
+		//funcao construtora
+		let AviaoF = function() {
+			this.cor = 'azul';
+			this.modelo = 'Boeng 7870';
+			this.levantarVoo = function() {console.log('Levanta Voo')}
+		}
+
+		let a2 = new AviaoF()
+
+		//classe
+		class AviaoC {
+			constructor() {
+				this.cor = 'Vermelho',
+				this.modelo = 'Embraer E-jets'
+			}
+			levantarVoo() {
+				console.log('Levantar Voo');
+			}
+		}
+
+		let a3 = new AviaoC();
+
+		console.log(a1)
+		console.log(a2)
+		console.log(a3)
 
 	</script>
 </head>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>destructuring</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		
+		//destructuring - get off values by the structures
+
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamao']
+
+        let [a, b, ,mamao, alem = 'banana'] = frutas //pula indice
+
+        console.log(frutas)
+        console.log(a, b, mamao, alem)
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamao'], ['José', 'Maria']]
+
+        let[[, , perosa] , [, amaria]] = coisas //recuperando valor de array multidimensional
+
+        console.log(perosa, amaria)
+        
+	</script>
+
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

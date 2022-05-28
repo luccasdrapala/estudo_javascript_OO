@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Var e Let</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+		//contexto spreasd
+
+        let tituloArtigo = 'Como utilizar rest/spread'
+
+        console.log(tituloArtigo)
+        console.log(...tituloArtigo)
+        console.log([...tituloArtigo])
+
+        //arrays
+
+        let listaCursos1 = ['nodeJS e Mongo', 'typescript e angular 4']
+        let listaCursos2 = ['Multiplataforma android/IOS', 'Introducao ao GNU/Linux']
+        let listaCursosCompleto = ['web completo', 'android completo', ...listaCursos1, ...listaCursos2]
+
+        console.log(listaCursosCompleto)
+
+        //objetos
+        let pessoa = {
+            nome: 'Joao',
+            idade: 22
+        }
+
+        let clone = {
+            endereco: 'Rua Pitu',
+            ...pessoa
+        }
+
+        console.log(clone)
+
+	</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>destructuring</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		
+		let array = [10, 20, 30, 40]
+
+        let [b, ...resto] = array
+
+        console.log(b, resto)
+
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30
+        }
+
+        let {a, ...ot_obj} = obj
+
+        console.log(a, ot_obj)
+
+	</script>
+
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

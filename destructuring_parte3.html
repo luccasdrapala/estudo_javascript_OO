@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>destructuring</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		
+		//array
+        let arr = [10, 20, 30, 40]
+
+        function teste([a, , b, , def = 'parametro default']) {
+            console.log(a, b, def)
+        }
+
+        teste(arr)
+
+        //objeto
+
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30, 
+            d: 40
+        }
+
+        function teste_obj({a: prime, b, c, d}) {
+            console.log(prime, b, c, d)
+        }
+
+        teste_obj(obj)
+
+	</script>
+
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>
